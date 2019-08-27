@@ -8,17 +8,21 @@ function currentLine(x) {
       for(var i = 0; i < x.length; i++) {
         line += (i + 1) + ". " + x[i] + ", "
       }
-      line = line.slice(0, line.length-2)
+      line = line.slice(0, line.length-2) 
       return "The line is currently: " + line
     }
 }
-
-
-
-function takeANumber(katzDeli, name) {
-  katzDeli.push(name)
-  return "Welcome, " + name + ". You are number " + katzDeli.length + " in line."
+// function takeANumber(katzDeli, name) {
+//   katzDeli.push(name)
+//   return "Welcome, " + name + ". You are number " + katzDeli.length + " in line."
+// }
+function takeANumber(katzDeli) {
+  var ticketNumber = 0
+  ticketNumber ++
+  katzDeli.push(ticketNumber)
+  return "Welcome you are ticket number " + ticketNumber + "."
 }
+
 function nowServing(x) {
   if (x.length === 0) {
     return "There is nobody waiting to be served!"
